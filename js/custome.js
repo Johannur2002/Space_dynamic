@@ -1,4 +1,5 @@
 window.onload = function () {
+    alert("Hey, I'm Nur Mohammad & welcome to my website!")
     const burger = document.querySelector('.burger');
     const burger__component = document.querySelector('.burger__component');
     const simple = document.querySelector('.simple__identity');
@@ -47,7 +48,6 @@ $(document).ready(function () {
       $('#scrollTop').fadeOut(500)
     }
   })
-
     //   Smooth scrolling effect
 
     var scrolltoOffset = $('#header').outerHeight() - 25;
