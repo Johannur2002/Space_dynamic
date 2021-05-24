@@ -101,6 +101,42 @@ $(document).ready(function () {
         }
       });
     });
+    
+    // Inactive all default feature
+
+    $(document).bind("contextmenu", (e) => {
+        e.preventDefault()
+        alert('You can\'t inspect and see the codes 😎😎😎')
+    })
+
+    $(document).keydown(e => {
+        if (e.which === 123) {
+            alert('You can\'t inspect and see the codes 😎😎😎')
+            return false
+        }
+    })
+
+    $(document).bind('keydown', function (e) {
+        if (e.ctrlKey && (e.which == 83)) {
+            e.preventDefault()
+            alert('Trying to download. Hey, remember that you can\'t 😎😎😎')
+            return false
+        }
+    })
+
+    window.oncontextmenu = function () {
+        return false;
+    }
+    $(document).keydown(function (event) {
+        if (event.keyCode == 123) {
+            alert('You can\'t inspect and see the codes 😎😎😎')
+            return false;
+        }
+        else if ((event.ctrlKey && event.shiftKey && event.keyCode == 73) || (event.ctrlKey && event.shiftKey && event.keyCode == 74)) {
+            alert('Trying to download. Hey, remember that you can\'t 😎😎😎')
+            return false;
+        }
+    });
 });
 
 // Preloader
